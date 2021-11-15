@@ -1,6 +1,7 @@
 package todo.todoapp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import todo.todoapp.entities.Item;
 import todo.todoapp.repositories.ItemRepository;
 
@@ -8,6 +9,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ItemService implements BaseService<Item>{
 
     @Autowired
@@ -37,7 +39,7 @@ public class ItemService implements BaseService<Item>{
 
     @Override
     @Transactional
-    public Item saveOne(Item entity) throws Exception {
+    public Item save(Item entity) throws Exception {
         try {
             entity = this.repository.save(entity);
             return entity;
@@ -48,7 +50,7 @@ public class ItemService implements BaseService<Item>{
 
     @Override
     @Transactional
-    public Item updateOne(long id, Item entity) throws Exception {
+    public Item update(long id, Item entity) throws Exception {
         try {
             Optional<Item> entityOptional = this.repository.findById(id);
             Item categoria = entityOptional.get();
