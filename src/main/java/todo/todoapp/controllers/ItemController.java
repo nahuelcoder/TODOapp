@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import todo.todoapp.entities.Item;
 import todo.todoapp.services.ItemService;
 
-@Controller
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping(path = "/")
 public class ItemController implements BaseController<Item, Long>{
 
     @Autowired

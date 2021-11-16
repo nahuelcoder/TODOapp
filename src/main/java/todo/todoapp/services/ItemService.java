@@ -53,9 +53,9 @@ public class ItemService implements BaseService<Item>{
     public Item update(long id, Item entity) throws Exception {
         try {
             Optional<Item> entityOptional = this.repository.findById(id);
-            Item categoria = entityOptional.get();
-            categoria = this.repository.save(entity);
-            return categoria;
+            Item item = entityOptional.get();
+            item = this.repository.save(entity);
+            return item;
         }catch (Exception e) {
             throw new Exception(e.getMessage());
         }
