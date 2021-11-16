@@ -9,20 +9,17 @@
 
 <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">{{title}}</a>
-    <div class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="tutorials" class="nav-link">TODO's</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="add" class="nav-link">Add</a>
-      </li>
-    </div>
+    <a href="#" class="navbar-brand">TODO App</a>
   </nav>
+  
+  <div
+  class="rainbow"
+  style="text-align:center; margin-top: 80px; margin-right: 40px"
+>
+  <h1>{{ title }}</h1>
+</div>
 
-  <div class="container mt-3">
-    <router-outlet></router-outlet>
-  </div>
+<router-outlet></router-outlet>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
