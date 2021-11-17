@@ -20,7 +20,6 @@ First you need to install the following software
 | Spring   | 2.5.6   |
 | MySQL    | 8.0.26  |
 | Node.js  | 14.17.3 |
-| Angular  | 13.0.2  |
 
 ### Getting the code
 
