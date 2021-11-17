@@ -1,52 +1,53 @@
 <div class="container-fluid">
-    <div class="center">
-      <form [formGroup]="todoForm" (ngSubmit)="onSubmit(todoForm.value)">
-        <div
-          class="form-row align-items-center"
-          style="margin-top: 30px; margin-left: 310px"
-        >
-          <div class="col-sm-6 my-1">
-            <input
-              type="text"
-              class="form-control"
-              formControlName="item"
-              #desc
-            />
-          </div>
-          <div class="col-auto my-1">
-            <button
-              type="button"
-              class="btn btn-primary"
-              (click)="onSubmit(todoForm.value)"
-            >
-              Add
-            </button>
-          </div>
+  <div class="center">
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit(todoForm.value)">
+      <div class="row align-items-center input_new_item">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="item"
+          />
         </div>
-      </form>
-      <br />
-      <table class="table">
-        <thead></thead>
-        <tbody>
-          <tr *ngFor="let todo of todos">
-            <td width="20%">
-              {{ todo.description }}
-              <br /><br />
-            <td>
-            </td>
-            <td>
-              <button class="btn btn-secondary" (click)="selectATodo(todo)">
-                Edit
-              </button>
-            </td>
-            <td>
-              <button class="btn btn-danger" (click)="deleteTodo(todo)">
-                Delete
-              </button>
-            </td>
-            <br />
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <div class="col-auto my-1">
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="onSubmit(todoForm.value)"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+    <br />
+    <p class="lead">
+      Keep your day organized
+    </p>
+    <table class="table table-striped table-hover">
+      <thead></thead>
+      <tbody>
+        <tr *ngFor="let todo of todos">
+          <th scope="row" class="item_checkbox">
+            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+          </th>
+          <td class="item_description">
+            {{ todo.description }}
+            <br /><br />
+          </td>
+          <td class="item_button">
+            <button class="btn btn-secondary" (click)="selectATodo(todo)">
+              Edit
+            </button>
+          </td>
+          <td class="item_button">
+            <button class="btn btn-danger" (click)="deleteTodo(todo)">
+              Delete
+            </button>
+          </td>
+          <br />
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

@@ -1,5 +1,21 @@
 .center {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-  }
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.input_new_item {
+  margin: 30px;
+}
+
+.item_checkbox {
+  width: 5%;
+}
+
+.item_description {
+  width: 75%;
+}
+
+.item_button {
+  width: 10%;
+}
