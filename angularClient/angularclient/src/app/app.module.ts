@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from "./components/todo/todo.component";
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [AppComponent, TodoComponent],
@@ -14,9 +14,9 @@ import { TodoComponent } from "./components/todo/todo.component";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
